@@ -1,0 +1,45 @@
+---
+layout: base.njk
+permalink: /service-area/
+navTitle: Service area
+seoTitle: "Service Area | Mobile Auto Glass Across North DFW, TX"
+metaDescription: "Fresh Start Auto Glass serves Little Elm, Frisco, McKinney, Denton, Plano & the north DFW metro. We come to you. Free quotes. Call [PHONE]."
+---
+{% from "macros.njk" import pageHeader, closingCta %}
+
+{{ pageHeader("Mobile Auto Glass Across the North DFW Metro", "We're a fully mobile service, which means our \"location\" is wherever you are. Based in Little Elm and Oak Point, we cover the north and northwest Dallas-Fort Worth suburbs, coming to your home, your workplace, or the roadside. Don't see your city? Call " + site.phoneLabel + ". If you're nearby, there's a good chance we can still get to you.") }}
+
+<div class="wrap area-groups">
+  {%- for g in site.serviceArea %}
+  <section class="area-group" aria-labelledby="group-{{ loop.index }}">
+    <div>
+      <h2 id="group-{{ loop.index }}">{{ g.group }}</h2>
+      {%- if g.note %}
+      <p class="area-note">{{ g.note }}</p>
+      {%- endif %}
+    </div>
+    <ul class="city-list">
+      {%- for c in g.cities %}
+      {%- if c | hasCityPage %}
+      <li><a href="{{ c | cityUrl }}">{{ c }}</a></li>
+      {%- else %}
+      <li>{{ c }}</li>
+      {%- endif %}
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endfor %}
+</div>
+
+<section class="mobile-points" aria-labelledby="mobile-title">
+  <div class="wrap">
+    <h2 id="mobile-title">Why mobile is better</h2>
+    <ul class="point-list">
+      <li><strong>No driving on damaged glass</strong> A compromised windshield is a safety risk. Let us come to you instead.</li>
+      <li><strong>No lost time</strong> Keep working, keep parenting, keep living. We handle the glass while you go about your day.</li>
+      <li><strong>One stop, including calibration</strong> We bring our ADAS equipment with us, so even camera recalibration happens on-site.</li>
+    </ul>
+  </div>
+</section>
+
+{{ closingCta(site, "We'll Come to You", "Wherever you are in the north DFW metro, Fresh Start Auto Glass can bring professional windshield and auto glass service to your door. Get your free quote today.") }}

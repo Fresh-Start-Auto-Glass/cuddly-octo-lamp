@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ seoTitle }}</title>
+  <meta name="description" content="{{ metaDescription | replace('[PHONE]', site.phoneLabel) }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {%- if noindex %}
+  <meta name="robots" content="noindex">
+  {%- endif %}
+  <meta name="theme-color" content="#000000">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ seoTitle }}">
+  <meta property="og:description" content="{{ metaDescription | replace('[PHONE]', site.phoneLabel) }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/assets/img/share-card-02-1200.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ site.name }} logo">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preload" href="/assets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+  <script type="application/ld+json">{{ schema.business | json | safe }}</script>
+  <script type="application/ld+json">{{ schema.website | json | safe }}</script>
+  {%- if navTitle %}
+  <script type="application/ld+json">{{ navTitle | breadcrumbSchema(page.url, site.url) | json | safe }}</script>
+  {%- endif %}
+  {%- if pageSchema %}
+  <script type="application/ld+json">{{ pageSchema | json | safe }}</script>
+  {%- endif %}
+  {%- if site.gaId %}
+  {# Google Analytics 4, live site only. Key events: generate_lead (quote form landed on /thanks/)
+     and call_click (any tel: link tapped). Mark call_click as a key event in GA4 once it shows up. #}
+  <script>
+    (function () {
+      if ({{ site.liveHosts | dump | safe }}.indexOf(location.hostname) === -1) return;
+      var id = "{{ site.gaId }}";
+      var s = document.createElement("script");
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag("js", new Date());
+      gtag("config", id);
+      {%- if page.url == "/thanks/" %}
+      gtag("event", "generate_lead", { form_name: "quote" });
+      {%- endif %}
+      document.addEventListener("click", function (e) {
+        var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+        if (a) gtag("event", "call_click", { link_text: a.textContent.trim(), page_path: location.pathname });
+      });
+    })();
+  </script>
+  {%- endif %}
+</head>
+{% import "social-icons.njk" as social %}
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {%- if site.showLaunchOffer %}
+  <div class="offer-bar">
+    <div class="wrap"><p><strong>{{ site.launchOffer.headline }}</strong> <a href="/faq/#launch-offer">Details</a></p></div>
+  </div>
+  {%- endif %}
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="/" aria-label="{{ site.name }} home">
+        <img src="/assets/img/logo-03-wordmark-320.webp"
+             srcset="/assets/img/logo-03-wordmark-320.webp 320w, /assets/img/logo-03-wordmark-640.webp 640w"
+             sizes="(max-width: 600px) 170px, 200px" width="200" height="44" alt="{{ site.name }}">
+      </a>
+
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          {%- for item in site.nav %}
+          <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-phone" href="{{ site.phoneHref }}">{{ site.phoneLabel }}</a>
+        <a class="btn btn-primary" href="/contact/#quote">Get a free quote</a>
+      </div>
+
+      <details class="mobile-menu">
+        <summary aria-label="Menu"><span class="menu-icon" aria-hidden="true"></span><span class="menu-text">Menu</span></summary>
+        <nav aria-label="Main (mobile)">
+          <ul>
+            {%- for item in site.nav %}
+            <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+            {%- endfor %}
+          </ul>
+          <a class="btn btn-primary btn-block" href="/contact/#quote">Get a free quote</a>
+          <a class="btn btn-outline btn-block" href="{{ site.phoneHref }}">Call {{ site.phoneLabel }}</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/img/logo-01-primary-320.webp"
+             srcset="/assets/img/logo-01-primary-320.webp 320w, /assets/img/logo-01-primary-640.webp 640w"
+             sizes="220px" width="220" height="95" alt="{{ site.name }}" loading="lazy">
+        <p>Mobile auto glass for the north Dallas-Fort Worth metro, based in {{ site.baseCities | join(" and ") }}, {{ site.region }}. We come to you.</p>
+      </div>
+      <div>
+        <h2 class="footer-heading">Contact</h2>
+        <ul class="footer-list">
+          <li><a href="{{ site.phoneHref }}">{{ site.phoneLabel }}</a></li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li class="footer-hours">{% for h in site.hoursLines %}<span>{{ h }}</span>{% endfor %}</li>
+        </ul>
+        {%- if site.googleReviewUrl %}
+        <p class="footer-review"><a class="review-btn" href="{{ site.googleReviewUrl }}" rel="noopener" target="_blank">{{ social.icon("Google") }}<span>Review us on Google</span></a></p>
+        {%- endif %}
+        <ul class="footer-icons">
+          {%- for p in site.profiles %}{% if p.url %}
+          <li><a href="{{ p.url }}" rel="noopener" target="_blank" aria-label="{{ site.name }} on {{ p.label }}" title="{{ p.label }}">{{ social.icon(p.label) }}</a></li>
+          {%- endif %}{% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-heading">Pages</h2>
+        <ul class="footer-list">
+          <li><a href="/">Home</a></li>
+          {%- for item in site.nav %}
+          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-heading">Popular areas</h2>
+        <ul class="footer-list">
+          {%- for c in cities %}
+          <li><a href="{{ c.name | cityUrl }}">{{ c.name }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-legal">
+      <p>&copy; {{ "" | year }} {{ site.legalName }}</p>
+    </div>
+  </footer>
+
+  {# Phone-only quick actions, pinned to the bottom of the screen #}
+  <div class="mobile-actions" aria-label="Quick actions">
+    <a class="btn btn-outline" href="{{ site.phoneHref }}">Call</a>
+    <a class="btn btn-primary" href="/contact/#quote">Free quote</a>
+  </div>
+</body>
+</html>

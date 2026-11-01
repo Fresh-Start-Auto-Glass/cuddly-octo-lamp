@@ -1,0 +1,102 @@
+---
+layout: base.njk
+permalink: /contact/
+navTitle: Contact
+seoTitle: "Contact Fresh Start Auto Glass | Free Quotes, DFW Mobile"
+metaDescription: "Call [PHONE] or request a free quote for mobile windshield replacement & ADAS calibration across north DFW. We come to you, same or next day."
+---
+{% from "macros.njk" import pageHeader %}
+
+{{ pageHeader("Get in Touch", "Ready for a free quote, or just have a question? The fastest way to reach us is by phone, but you can also use the form below and we'll get right back to you.") }}
+
+<section class="wrap contact" aria-label="Contact details and quote form">
+  <div class="contact-grid">
+    <dl class="contact-details">
+      <div>
+        <dt>Phone</dt>
+        <dd><a href="{{ site.phoneHref }}">{{ site.phoneLabel }}</a><br>Call or text for the fastest response.</dd>
+      </div>
+      <div>
+        <dt>Email</dt>
+        <dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
+      </div>
+      <div>
+        <dt>Service area</dt>
+        <dd>Fully mobile across the north and northwest Dallas-Fort Worth metro, based in Little Elm and Oak Point, TX. We come to you. <a href="/service-area/">See the cities we serve</a>.</dd>
+      </div>
+      <div>
+        <dt>Hours</dt>
+        <dd>{% for h in site.hoursLines %}{{ h }}<br>{% endfor %}After-hours appointments may be available for an added fee. Just call.</dd>
+      </div>
+    </dl>
+
+    <div class="quote-card" id="quote">
+      <h2>Request a free quote</h2>
+      <p>Tell us a little about your vehicle and the damage, and we'll get back to you quickly with a free, no-obligation quote. A photo of the damage helps us give you the most accurate price.</p>
+
+      {# Netlify Forms: Netlify finds this form at deploy time and emails submissions (set up in the Netlify dashboard). #}
+      <form name="quote" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+        <input type="hidden" name="form-name" value="quote">
+        <p class="visually-hidden"><label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Email <span class="optional">(optional)</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="f-city">City or location</label>
+            <input id="f-city" name="city" type="text" autocomplete="address-level2" required>
+          </div>
+          <div class="field field-full">
+            <label for="f-vehicle">Vehicle year, make, and model</label>
+            <input id="f-vehicle" name="vehicle" type="text" placeholder="For example, 2021 Toyota RAV4" required>
+          </div>
+          <div class="field field-full">
+            <label for="f-vin">VIN <span class="optional">(optional)</span></label>
+            <input id="f-vin" name="vin" type="text" maxlength="17" pattern="[A-HJ-NPR-Za-hj-npr-z0-9]{17}" title="17 letters and numbers (no I, O, or Q)" autocapitalize="characters" autocomplete="off" spellcheck="false" aria-describedby="f-vin-hint">
+            <span class="hint" id="f-vin-hint">Helps us find the exact glass for your vehicle. It's the 17-character number at the bottom of the windshield on the driver's side, or on your insurance card or registration.</span>
+          </div>
+          <div class="field">
+            <label for="f-service">Service needed</label>
+            <select id="f-service" name="service" required>
+              <option value="">Choose one</option>
+              <option>Windshield replacement</option>
+              <option>Chip and crack repair</option>
+              <option>ADAS calibration</option>
+              <option>Door or side glass</option>
+              <option>Back glass</option>
+              <option>Mirror glass</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-when">Preferred day and time <span class="optional">(optional)</span></label>
+            <input id="f-when" name="preferred_time" type="text" placeholder="For example, Tuesday morning">
+          </div>
+          <div class="field field-full">
+            <label for="f-damage">Describe the damage</label>
+            <textarea id="f-damage" name="damage" required></textarea>
+          </div>
+          <div class="field field-full">
+            <label for="f-photo">Photo of the damage <span class="optional">(optional)</span></label>
+            <input id="f-photo" name="photo" type="file" accept="image/*">
+            <span class="hint">One photo, up to 8 MB.</span>
+          </div>
+          <div class="form-submit">
+            <button class="btn btn-primary btn-lg" type="submit">Request my free quote</button>
+            <p class="form-note">We only use your details to reply to your request.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

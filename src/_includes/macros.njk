@@ -1,0 +1,51 @@
+{# Reusable page pieces. Import with: {% from "macros.njk" import pageHeader, closingCta %} #}
+
+{% macro pageHeader(title, intro) %}
+<section class="page-header">
+  <div class="wrap">
+    <h1>{{ title }}</h1>
+    {%- if intro %}
+    <p class="lede">{{ intro | safe }}</p>
+    {%- endif %}
+  </div>
+</section>
+{% endmacro %}
+
+{% macro closingCta(site, title, body, primaryLabel="Get a free quote") %}
+<section class="closing" aria-labelledby="closing-title">
+  <div class="wrap closing-inner">
+    <h2 id="closing-title">{{ title }}</h2>
+    <p>{{ body | safe }}</p>
+    <div class="actions">
+      <a class="btn btn-white btn-lg" href="/contact/#quote">{{ primaryLabel }}</a>
+      <a class="btn btn-ghost btn-lg" href="{{ site.phoneHref }}">Call {{ site.phoneLabel }}</a>
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{# One before/after pair from src/_data/work.js. headingLevel sets the vehicle name's heading tag. #}
+{% macro workPair(w, headingLevel="h3") %}
+<figure class="work-pair">
+  <div class="work-shots">
+    <div class="shot">
+      <img src="/assets/img/work/{{ w.slug }}-before-600.webp"
+           srcset="/assets/img/work/{{ w.slug }}-before-600.webp 600w, /assets/img/work/{{ w.slug }}-before-1200.webp 1200w"
+           sizes="(max-width: 600px) 50vw, (max-width: 900px) 25vw, 300px"
+           width="600" height="600" loading="lazy" decoding="async" alt="Before: {{ w.beforeAlt }}">
+      <span class="shot-tag">Before</span>
+    </div>
+    <div class="shot">
+      <img src="/assets/img/work/{{ w.slug }}-after-600.webp"
+           srcset="/assets/img/work/{{ w.slug }}-after-600.webp 600w, /assets/img/work/{{ w.slug }}-after-1200.webp 1200w"
+           sizes="(max-width: 600px) 50vw, (max-width: 900px) 25vw, 300px"
+           width="600" height="600" loading="lazy" decoding="async" alt="After: {{ w.afterAlt }}">
+      <span class="shot-tag shot-tag-after">After</span>
+    </div>
+  </div>
+  <figcaption>
+    <{{ headingLevel }} class="work-title">{{ w.vehicle }} <span>{{ w.glass }}</span></{{ headingLevel }}>
+    <p>{{ w.note }}</p>
+  </figcaption>
+</figure>
+{% endmacro %}

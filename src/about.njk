@@ -1,0 +1,64 @@
+---
+layout: base.njk
+permalink: /about/
+navTitle: About
+seoTitle: "About Fresh Start Auto Glass | Local Mobile Glass, DFW"
+metaDescription: "Fresh Start Auto Glass is a locally owned, mobile auto glass service in Little Elm, TX, run by an experienced technician. Honest work, fair prices. Call [PHONE]."
+---
+{% from "macros.njk" import pageHeader, closingCta %}
+
+{{ pageHeader("About Fresh Start Auto Glass", "Fresh Start Auto Glass was built on a simple idea: auto glass service should be convenient, honest, and done right the first time.") }}
+
+<section class="wrap prose" aria-label="Our story">
+  <div class="prose-inner">
+    <h2>Our story</h2>
+    <p>We're a locally owned, owner-funded business based in Little Elm and Oak Point, Texas. Behind the name is an experienced glass technician with years in the trade, someone who has seen how the big chains and high-volume shops cut corners, and who wanted to do it better. No pressure, no upsells, no sending you across town to finish a job.</p>
+
+  </div>
+</section>
+
+<section class="tech" id="technician" aria-labelledby="tech-title">
+  <div class="wrap tech-grid{% if not tech.photo %} tech-no-photo{% endif %}">
+    {%- if tech.photo %}
+    <img class="tech-photo" src="/assets/img/{{ tech.photo }}"
+         srcset="/assets/img/{{ tech.photo }} 600w, /assets/img/{{ tech.photo | replace('-600.', '-1200.') }} 1200w"
+         sizes="(max-width: 900px) 100vw, 400px" width="600" height="600" loading="lazy" decoding="async" alt="{{ tech.photoAlt }}">
+    {%- endif %}
+    <div class="tech-copy">
+      <h2 id="tech-title">Meet {{ tech.name }}, your technician</h2>
+      {%- for p in tech.bio %}
+      <p>{{ p }}</p>
+      {%- endfor %}
+      <blockquote class="tech-quote">
+        <p>&ldquo;{{ tech.quote }}&rdquo;</p>
+        <footer>{{ tech.name }}</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="wrap prose prose-after" aria-label="What we believe">
+  <div class="prose-inner">
+    <h2>What we believe</h2>
+    <ul class="beliefs">
+      <li>
+        <strong>Convenience that respects your time.</strong>
+        <p>You have a life to live. We're fully mobile, so we come to your home, your work, or the roadside, and we get you back on the road without the hassle of a shop visit.</p>
+      </li>
+      <li>
+        <strong>Honesty first.</strong>
+        <p>If a chip can be repaired, we'll tell you, even though a replacement would earn us more. If your vehicle needs ADAS calibration, we'll explain why, and we'll do it right. You'll always get a straight answer and an upfront price.</p>
+      </li>
+      <li>
+        <strong>Quality you can count on.</strong>
+        <p>Every installation is done to proper standards and backed by a workmanship warranty. We treat your vehicle like it's our own.</p>
+      </li>
+    </ul>
+
+    <h2>Why "Fresh Start"?</h2>
+    <p>The name came from JD. After years working for national chains and other people's shops, he wanted to do auto glass the way he always believed it should be done: no shortcuts, no upsells, and real pride in every install. Fresh Start Auto Glass is his fresh start.</p>
+    <p>We want every customer to get one too. A damaged windshield is a small thing that can throw off your whole week. Our job is to make it right, cleanly and quickly, so you can get back to your life with a clear view ahead.</p>
+  </div>
+</section>
+
+{{ closingCta(site, "Experience the Fresh Start Difference", "Insured, local, and genuinely glad to help. Get your free quote today.") }}

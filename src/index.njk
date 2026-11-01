@@ -1,0 +1,170 @@
+---
+layout: base.njk
+seoTitle: "Mobile Auto Glass & Windshield Replacement | DFW & Little Elm, TX"
+metaDescription: "Fresh Start Auto Glass brings mobile windshield replacement, chip repair, and in-house ADAS calibration to you across DFW. Free quotes. Call [PHONE]."
+---
+{% from "macros.njk" import workPair %}
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Mobile Auto Glass, Done Right, Right Where You Are</h1>
+      <p class="lede">Windshield replacement, chip and crack repair, and in-house ADAS calibration across the Dallas-Fort Worth metro. We come to your home, your work, or the roadside, so you never lose a day to a cracked windshield.</p>
+      <div class="actions">
+        <a class="btn btn-primary btn-lg" href="/contact/#quote">Get a free quote</a>
+        <a class="btn btn-outline btn-lg" href="{{ site.phoneHref }}">Call {{ site.phoneLabel }}</a>
+      </div>
+    </div>
+
+    <div class="hero-side">
+      <img class="hero-logo" src="/assets/img/logo-01-primary-640.webp"
+           srcset="/assets/img/logo-01-primary-640.webp 640w, /assets/img/logo-01-primary-1200.webp 1200w"
+           sizes="(max-width: 900px) 90vw, 480px" width="640" height="277" alt="" fetchpriority="high">
+    <div class="windshield" role="presentation">
+      <ul class="windshield-list">
+        <li><strong>We come to you</strong> Home, work, or roadside</li>
+        <li><strong>Calibration in-house</strong> Glass and ADAS in one visit</li>
+        <li><strong>Same or next day</strong> In most cases</li>
+        <li><strong>Free quotes</strong> Insurance or out of pocket</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <p>A cracked windshield shouldn't wreck your week. Fresh Start Auto Glass is a fully mobile auto glass service based in Little Elm and Oak Point, serving the north and northwest DFW suburbs. We bring the shop to you, finish the job in one visit, and stand behind our work. Insured, and run by an experienced technician who treats your vehicle like his own.</p>
+  </div>
+</section>
+
+<section class="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="services-title">What we do</h2>
+      <a class="text-link" href="/services/">See all services</a>
+    </div>
+    <ul class="service-list">
+      <li>
+        <h3>Windshield replacement</h3>
+        <p>Chipped beyond repair or cracked across your line of sight? We replace windshields on cars, trucks, and SUVs with quality glass and a clean, professional install.</p>
+      </li>
+      <li>
+        <h3>Chip and crack repair</h3>
+        <p>Caught it early? A quick repair can stop a chip from spreading and often saves the whole windshield, for a fraction of the cost of replacement.</p>
+      </li>
+      <li>
+        <h3>Door and side glass</h3>
+        <p>Broken door window or side glass from a break-in or accident? We replace it and clean up the glass so you can get back on the road.</p>
+      </li>
+      <li>
+        <h3>Back glass</h3>
+        <p>Shattered rear windshield? We handle back glass replacement, including defroster lines, and vacuum out the mess.</p>
+      </li>
+      <li>
+        <h3>Side mirror glass</h3>
+        <p>Clipped your mirror? We replace cracked and broken side mirror glass quickly and affordably.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="work-teaser" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="work-title">Before and after</h2>
+      <a class="text-link" href="/our-work/">See more of our work</a>
+    </div>
+    <div class="work-grid work-grid-3">
+      {%- for w in work %}{% if w.featured %}
+      {{ workPair(w) }}
+      {%- endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="tech-strip" aria-label="Your technician">
+  <div class="wrap">
+  <div class="tech-strip-inner">
+    {%- if tech.photo %}
+    <img class="tech-strip-photo" src="/assets/img/{{ tech.stripPhoto or tech.photo }}" width="200" height="200" loading="lazy" decoding="async" alt="{{ tech.photoAlt }}">
+    {%- endif %}
+    <p>Every job is done by {{ tech.name }}, a technician with {{ tech.years }} years in auto glass.</p>
+    <a class="text-link" href="/about/#technician">Meet {{ tech.name }}</a>
+  </div>
+  </div>
+</section>
+
+<section class="adas" aria-labelledby="adas-title">
+  <div class="wrap adas-grid">
+    <div class="adas-copy">
+      <h2 id="adas-title">In-house ADAS calibration</h2>
+      <p>Most late-model vehicles need the forward-facing camera recalibrated after a windshield replacement. That camera runs lane departure warning, automatic emergency braking, and adaptive cruise control. We recalibrate it in-house, on our own equipment, in the same visit. No second appointment at a dealership.</p>
+      <a class="btn btn-light" href="/services/#adas">How calibration works</a>
+    </div>
+    <ol class="adas-steps">
+      <li><strong>Pre-scan</strong> We check your vehicle's safety systems before any work starts.</li>
+      <li><strong>New glass</strong> Your windshield is replaced with proper urethane and curing.</li>
+      <li><strong>Calibrate and verify</strong> The camera is recalibrated to manufacturer specs, and a post-scan confirms it.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <h2 id="why-title">Why choose Fresh Start Auto Glass</h2>
+    <ul class="why-list">
+      <li><strong>We come to you.</strong> Home, work, or roadside. No waiting rooms, no second trip, no rearranging your day.</li>
+      <li><strong>In-house ADAS calibration.</strong> Glass and calibration happen in one visit, with documented pre- and post-scans.</li>
+      <li><strong>Fast turnaround.</strong> Same-day or next-day service in most cases, because a damaged windshield can't wait.</li>
+      <li><strong>Insured.</strong> Fully covered, so you have peace of mind from the first call.</li>
+      <li><strong>Free quotes.</strong> Know your price up front, with no surprises.</li>
+      <li><strong>Insurance or out of pocket.</strong> We work directly with insurance, and we handle cash and card customers just as easily.</li>
+      <li><strong>Warrantied workmanship.</strong> Professional installs backed by a workmanship warranty.</li>
+      <li><strong>Fair, competitive pricing.</strong> Quality work at a better price than the big national chains.</li>
+    </ul>
+    <a class="btn btn-primary" href="/contact/#quote">Get my free quote</a>
+  </div>
+</section>
+
+<section class="steps" aria-labelledby="steps-title">
+  <div class="wrap">
+    <h2 id="steps-title">How it works</h2>
+    <ol class="step-list">
+      <li><h3>Contact us</h3><p>Call {{ site.phoneLabel }} or request a free quote online. Tell us your vehicle and what's going on with your glass.</p></li>
+      <li><h3>Get your quote</h3><p>We give you a clear, upfront price and help you figure out whether insurance or out of pocket makes more sense.</p></li>
+      <li><h3>We come to you</h3><p>Pick a time and place that works: at home, at the office, or on the side of the road. We handle the rest.</p></li>
+      <li><h3>Done right</h3><p>We replace or repair your glass, recalibrate your ADAS camera if needed, clean up, and you're back on the road the same day in most cases.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="area" aria-labelledby="area-title">
+  <div class="wrap area-grid">
+    <div>
+      <h2 id="area-title">Serving the north DFW metro</h2>
+      <p>We serve the north and northwest Dallas-Fort Worth metro from our home base in Little Elm and Oak Point. Not sure if you're in range? Call {{ site.phoneLabel }} and ask. If we can get to you, we will.</p>
+      <a class="text-link" href="/service-area/">View full service area</a>
+    </div>
+    <ul class="city-list">
+      {%- for c in ["Little Elm", "Oak Point", "Frisco", "Denton", "The Colony", "Lewisville", "Prosper", "McKinney", "Plano", "Aubrey", "Celina", "Flower Mound", "Carrollton", "Highland Village", "Allen"] %}
+      {%- if c | hasCityPage %}
+      <li><a href="{{ c | cityUrl }}">{{ c }}</a></li>
+      {%- else %}
+      <li>{{ c }}</li>
+      {%- endif %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="closing" aria-labelledby="closing-title">
+  <div class="wrap closing-inner">
+    <h2 id="closing-title">Ready for a Fresh Start?</h2>
+    <p>Don't let a cracked windshield slow you down. Get a free quote today and let us bring fast, professional mobile auto glass service right to your door.</p>
+    <div class="actions">
+      <a class="btn btn-white btn-lg" href="/contact/#quote">Get a free quote</a>
+      <a class="btn btn-ghost btn-lg" href="{{ site.phoneHref }}">Call {{ site.phoneLabel }}</a>
+    </div>
+  </div>
+</section>

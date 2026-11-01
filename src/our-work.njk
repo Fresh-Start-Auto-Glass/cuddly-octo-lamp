@@ -1,0 +1,22 @@
+---
+layout: base.njk
+permalink: /our-work/
+navTitle: Our work
+seoTitle: "Before & After: Windshield and Back Glass Replacement | Fresh Start Auto Glass"
+metaDescription: "Before and after photos of windshield, back glass, and liftgate glass replacements by our technician across DFW. Free quotes. Call [PHONE]."
+---
+{% from "macros.njk" import pageHeader, closingCta, workPair %}
+
+{{ pageHeader("Our work", "Real before and after photos of jobs done by our technician across the Dallas-Fort Worth area, from hail-shattered back glass to full windshield replacements. License plates are blurred for privacy.") }}
+
+<section class="work-section" aria-label="Before and after photos">
+  <div class="wrap">
+    <div class="work-grid">
+      {%- for w in work %}
+      {{ workPair(w, "h2") }}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{{ closingCta(site, "Got glass that looks like a before photo?", "Get a free quote and we'll come to you to make it right.") }}

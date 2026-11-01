@@ -1,0 +1,43 @@
+// Before and after photos for the "Our work" page and the home page teaser.
+// Images live in src/assets/img/work/ as <slug>-before-600.webp, -before-1200.webp, -after-600.webp, -after-1200.webp.
+// They were cropped square, stripped of location data, and had license plates blurred.
+// These jobs were done by our technician before Fresh Start Auto Glass opened, so the copy presents them as his work.
+// featured: true puts the pair in the home page teaser (keep it to 3).
+export default [
+  { vehicle: "Honda Accord", glass: "Rear glass", slug: "honda-accord-rear-glass", featured: true,
+    note: "A hail storm shattered the rear glass and covered the trunk in glass and leaves.",
+    beforeAlt: "Silver Honda Accord with its rear glass shattered by hail", afterAlt: "The same Honda Accord with new rear glass installed" },
+  { vehicle: "Infiniti G37", glass: "Rear glass", slug: "infiniti-g37-rear-glass", featured: true,
+    note: "Vandals smashed the rear glass. Replaced the same day.",
+    beforeAlt: "White Infiniti G37 with smashed rear glass", afterAlt: "The same Infiniti G37 with new rear glass, photographed that evening" },
+  { vehicle: "Infiniti QX60", glass: "Liftgate glass", slug: "infiniti-qx60-liftgate-glass",
+    note: "Hail took out the liftgate glass.",
+    beforeAlt: "Black Infiniti QX60 with its liftgate glass blown out by hail", afterAlt: "The same Infiniti QX60 with new liftgate glass" },
+  { vehicle: "Volkswagen Passat", glass: "Rear glass", slug: "vw-passat-rear-glass",
+    note: "Hail shattered the rear glass across the parcel shelf.",
+    beforeAlt: "Silver Volkswagen Passat with shattered rear glass", afterAlt: "The same Volkswagen Passat with new rear glass" },
+  { vehicle: "Nissan Maxima", glass: "Rear glass", slug: "nissan-maxima-rear-glass",
+    note: "Rear glass shattered and caved in.",
+    beforeAlt: "Dark Nissan Maxima with shattered, caved-in rear glass", afterAlt: "The same Nissan Maxima with new rear glass" },
+  { vehicle: "Nissan Altima", glass: "Rear glass", slug: "nissan-altima-rear-glass",
+    note: "Rear glass shattered.",
+    beforeAlt: "Silver Nissan Altima with shattered rear glass", afterAlt: "The same Nissan Altima with new rear glass" },
+  { vehicle: "Pickup truck", glass: "Back glass", slug: "pickup-back-glass",
+    note: "Back glass shattered across the whole pane.",
+    beforeAlt: "Red pickup truck with shattered back glass", afterAlt: "The same red pickup with new back glass" },
+  { vehicle: "Chevy Silverado", glass: "Windshield", slug: "chevy-silverado-windshield", featured: true,
+    note: "The cracked windshield came out in one piece. That's it in front of the truck.",
+    beforeAlt: "White Chevy Silverado with its cracked windshield removed and lying in front of the truck", afterAlt: "The same Chevy Silverado with a new windshield" },
+  { vehicle: "BMW 3 Series", glass: "Windshield", slug: "bmw-3-series-windshield",
+    note: "Windshield replaced in the customer's driveway.",
+    beforeAlt: "Gray BMW 3 Series in a driveway with the old windshield removed", afterAlt: "The same BMW 3 Series with a new windshield" },
+  { vehicle: "Hyundai Santa Fe", glass: "Windshield", slug: "hyundai-santa-fe-windshield",
+    note: "Windshield replaced after front-end damage.",
+    beforeAlt: "Red Hyundai Santa Fe with front-end damage and the windshield removed", afterAlt: "The same Hyundai Santa Fe with a new windshield" },
+  { vehicle: "Chrysler 300", glass: "Windshield", slug: "chrysler-300-windshield",
+    note: "Windshield replaced after front-end damage.",
+    beforeAlt: "Red Chrysler 300 with front-end damage and the windshield removed", afterAlt: "The same Chrysler 300 with a new windshield" },
+  { vehicle: "Kia Forte", glass: "Windshield", slug: "kia-forte-windshield",
+    note: "Windshield replaced after front-end damage.",
+    beforeAlt: "Red Kia Forte with front-end damage and the windshield removed", afterAlt: "The same Kia Forte with a new windshield" },
+];

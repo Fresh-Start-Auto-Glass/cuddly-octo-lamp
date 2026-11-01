@@ -1,0 +1,90 @@
+---
+# One landing page per city in src/_data/cities.js
+layout: base.njk
+pagination:
+  data: cities
+  size: 1
+  alias: city
+  addAllPagesToCollections: true
+permalink: "{{ city.name | cityUrl }}"
+eleventyComputed:
+  navTitle: "Mobile Auto Glass in {{ city.name }}, TX"
+  seoTitle: "Mobile Auto Glass {{ city.name }} TX | Windshield Replacement"
+  metaDescription: "Mobile windshield replacement, chip repair & ADAS calibration in {{ city.name }}, TX. We come to you, same or next day. Free quotes. Call [PHONE]."
+---
+{% from "macros.njk" import closingCta %}
+
+<section class="hero hero-city">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Mobile Auto Glass &amp; Windshield Replacement in {{ city.name }}, TX</h1>
+      <p class="lede">Fresh Start Auto Glass brings fast, professional windshield replacement, chip and crack repair, and in-house ADAS calibration right to you in {{ city.name }}. Home, work, or roadside. Free quotes, same-day and next-day service available.</p>
+      <div class="actions">
+        <a class="btn btn-primary btn-lg" href="/contact/#quote">Get a free quote</a>
+        <a class="btn btn-outline btn-lg" href="{{ site.phoneHref }}">Call {{ site.phoneLabel }}</a>
+      </div>
+    </div>
+    <div class="windshield" role="presentation">
+      <ul class="windshield-list">
+        <li><strong>Anywhere in {{ city.name }}</strong> Home, work, or roadside</li>
+        <li><strong>Calibration in-house</strong> Glass and ADAS in one visit</li>
+        <li><strong>Same or next day</strong> In most cases</li>
+        <li><strong>Free quotes</strong> Insurance or out of pocket</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="wrap rows">
+  <section class="row" aria-labelledby="local-title">
+    <h2 id="local-title">Cracked windshield in {{ city.name }}?</h2>
+    <div class="row-body">
+      <p>Don't waste an afternoon sitting in a shop. We're a fully mobile auto glass service, and we come to you anywhere in {{ city.name }}, {{ city.localLine or "whether you're at home, at the office, or stuck in a parking lot" }}.</p>
+      {%- if city.isHomeBase %}
+      <p>We're based right here in {{ city.name }}, so we know the area well and can usually be out same-day or next-day. We're insured, and every job is backed by a workmanship warranty.</p>
+      {%- else %}
+      <p>As a locally based business in nearby Little Elm, we know {{ city.name }} well and we can usually be out same-day or next-day. We're insured, and every job is backed by a workmanship warranty.</p>
+      {%- endif %}
+      <p>Most importantly, if your vehicle needs ADAS camera calibration after a windshield replacement (and most newer vehicles do), we handle it in-house, in the same visit, on our own equipment. No sending you to a dealership. One appointment, done right.</p>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="services-title">
+    <h2 id="services-title">Services in {{ city.name }}</h2>
+    <div class="row-body">
+      <ul class="city-services">
+        <li><a href="/services/#windshield">Windshield replacement</a></li>
+        <li><a href="/services/#chip-repair">Windshield chip and crack repair</a></li>
+        <li><a href="/services/#adas">In-house ADAS calibration</a></li>
+        <li><a href="/services/#door-glass">Door and side glass replacement</a></li>
+        <li><a href="/services/#back-glass">Back glass (rear windshield) replacement</a></li>
+        <li><a href="/services/#mirror-glass">Side mirror glass replacement</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="why-title">
+    <h2 id="why-title">Why {{ city.name }} drivers choose Fresh Start</h2>
+    <div class="row-body">
+      <ul class="why-list">
+        <li>We come to you, anywhere in {{ city.name }}</li>
+        <li>Same-day and next-day appointments in most cases</li>
+        <li>In-house ADAS calibration, not outsourced</li>
+        <li>Insurance and out of pocket both welcome</li>
+        <li>Fair pricing and warrantied work</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<section class="wrap other-cities" aria-labelledby="other-title">
+  <h2 id="other-title">Other areas we serve</h2>
+  <ul class="city-list">
+    {%- for c in cities %}{% if c.name != city.name %}
+    <li><a href="{{ c.name | cityUrl }}">{{ c.name }}</a></li>
+    {%- endif %}{% endfor %}
+    <li><a href="/service-area/">Full service area</a></li>
+  </ul>
+</section>
+
+{{ closingCta(site, "Serving " + city.name + ", One Windshield at a Time", "Get your free quote today and let Fresh Start Auto Glass bring the shop to your " + city.name + " driveway.", "Get my free quote") }}

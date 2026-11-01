@@ -1,0 +1,14 @@
+{
+  "name": "freshstartautoglass-site",
+  "version": "1.0.0",
+  "description": "Fresh Start Auto Glass website",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7"
+  },
+  "private": true,
+  "type": "module"
+}

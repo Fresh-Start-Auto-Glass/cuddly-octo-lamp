@@ -1,0 +1,29 @@
+---
+layout: base.njk
+permalink: /faq/
+navTitle: FAQ
+seoTitle: "Auto Glass FAQ | Windshield & ADAS Calibration Questions"
+metaDescription: "Answers to common questions about mobile windshield replacement, ADAS calibration, insurance, pricing & timing in DFW. Call [PHONE] for a free quote."
+---
+{% from "macros.njk" import pageHeader, closingCta %}
+
+{{ pageHeader("Frequently Asked Questions", "Straight answers to the questions we hear most. Don't see yours? Call " + site.phoneLabel + " and we'll be glad to help.") }}
+
+<div class="wrap faq">
+  {%- if site.showLaunchOffer %}
+  <section class="faq-item" id="launch-offer" aria-labelledby="faq-offer">
+    <h2 id="faq-offer">What's the launch offer?</h2>
+    <p>{{ site.launchOffer.headline }} {{ site.launchOffer.terms }}</p>
+  </section>
+  {%- endif %}
+  {%- for f in faqs %}
+  <section class="faq-item" aria-labelledby="faq-{{ loop.index }}">
+    <h2 id="faq-{{ loop.index }}">{{ f.q }}</h2>
+    <p>{{ f.a | replace("[PHONE]", site.phoneLabel) }}</p>
+  </section>
+  {%- endfor %}
+</div>
+
+{{ closingCta(site, "Still Have Questions?", "We're happy to talk it through. Call " + site.phoneLabel + " or request a free quote and we'll give you honest answers and a clear price.") }}
+
+<script type="application/ld+json">{{ faqs | faqSchema(site.phoneLabel) | json | safe }}</script>
