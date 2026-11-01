@@ -1,6 +1,6 @@
 // FAQ content. Used for the FAQ page AND its FAQPage structured data, so the two never drift apart.
 // [PHONE] is swapped for the real number (or the placeholder) when the site builds.
-// Insurance wording is intentionally hedged ("many policies", "sometimes"). Keep it that way.
+// Keep insurance wording general ("many policies", "sometimes"): coverage varies by policy.
 export default [
   {
     q: "Do you come to me, or do I have to bring the vehicle somewhere?",
@@ -39,7 +39,7 @@ export default [
     a: "We use quality glass that meets or exceeds safety standards for a proper, safe install. We can source OEM (original equipment manufacturer) glass when you want it or when your vehicle requires it. Just let us know your preference and we'll include it in your quote.",
   },
   {
-    // Warranty terms approved by JD, Nov 1, 2026. Same wording as the Omega invoice footer.
+    // Keep in sync with the warranty on the invoice footer.
     q: "Do you offer a warranty?",
     a: "Yes. We warrant our installation against water leaks, wind noise, and loose moldings for as long as you own the vehicle. If one of these is caused by our work, we'll fix it at no charge. ADAS calibrations are warranted for 30 days: if your camera needs to be recalibrated within 30 days because of our calibration, we'll redo it at no charge. The calibration warranty covers the calibration only, not the camera or other sensor parts. The warranty doesn't cover glass broken by new impacts, stress cracks from outside causes, rust or body damage, damage from later accidents or repairs by others, or manufacturer defects in the glass, which are covered by the glass maker. Chip repairs aren't guaranteed to be invisible. If a chip we repaired spreads, we'll credit the repair cost toward a replacement.",
   },
@@ -52,7 +52,6 @@ export default [
     a: "Usually about an hour, so the adhesive can reach a safe drive-away strength, though it varies with conditions and the adhesive used. If your vehicle needs ADAS calibration, we complete that before we leave. We'll give you exact instructions before we finish.",
   },
   {
-    // TODO: confirm with the operator. If his adhesive has a set cure time (e.g. 48 hours), use that number.
     q: "Can I take my car through a car wash after a windshield replacement?",
     a: "Not right away. Give it a few days before an automatic car wash, especially the high-pressure kind, so the adhesive holding your new windshield has time to fully cure. Cure time depends on the adhesive used and the weather, so we'll tell you exactly how long to wait before we leave.",
   },

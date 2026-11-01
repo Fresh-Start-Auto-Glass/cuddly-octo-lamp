@@ -1,5 +1,5 @@
 """Favicon and app icons from the brand's square favicon export: the FS monogram on black.
-Usage: python3 scripts/make_icon.py ~/Desktop/Business/Branding src
+Usage: python3 scripts/make_icon.py path/to/Branding src
 
 Source: Branding/03 - Digital & Social Assets/Favicon.png (512x512), used as supplied and
 only resized.

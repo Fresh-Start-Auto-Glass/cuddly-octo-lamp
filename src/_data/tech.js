@@ -1,6 +1,5 @@
 // Our technician, shown on the About page ("Meet JD") and in a short strip on the home page.
-// JD reviewed and approved this copy on October 20, 2026.
-// photo: 600 px file in src/assets/img/ (a matching -1200 file sits alongside). Made from ~/Desktop/Business/jd_profile_photo.HEIC, cropped square to head and shoulders, location data removed.
+// photo: 600 px file in src/assets/img/ (a matching -1200 file sits alongside), cropped square, location data removed.
 // Set photo to null to hide the photo slot; the text then runs full width.
 export default {
   name: "JD",

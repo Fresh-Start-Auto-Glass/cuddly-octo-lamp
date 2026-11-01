@@ -1,5 +1,5 @@
 """Make web-optimized logo files from the official RGB PNGs.
-Usage: python3 scripts/make_images.py ~/Desktop/Business/Branding src/assets/img
+Usage: python3 scripts/make_images.py path/to/Branding src/assets/img
 
 Source: Branding/01 - Official Logo Files/RGB Version/PNG (Official Brand Guidelines, Oct 2026).
 The designer's files are read as supplied and never changed. Only the generated WebP/PNG
