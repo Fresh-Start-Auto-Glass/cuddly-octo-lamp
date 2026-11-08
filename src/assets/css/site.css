@@ -147,25 +147,21 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .lede { margin-top: 1.25rem; font-size: 1.1875rem; line-height: 1.55; color: var(--muted); max-width: 36rem; }
 .hero .actions { margin-top: 2rem; }
 
-/* The windshield: the one bold element. Brand blue gradient in a windshield outline, with a glare streak. */
+/* The highlights card: the one bold element. Brand blue gradient with a glare streak.
+   (Was a windshield trapezoid; under the logo it read like a UFO beam, so it is a plain rounded card now.) */
 .windshield {
   --glare: 72%;   /* glare streak sits right of the text */
   position: relative;
-  padding: clamp(1.75rem, 3vw, 2.5rem) clamp(2.75rem, 6vw, 4.25rem);
+  padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 3vw, 2.25rem);
   color: var(--white);
   background:
     linear-gradient(118deg, transparent 0 var(--glare), rgba(255,255,255,0.20) calc(var(--glare) + 0.2%) calc(var(--glare) + 3%), rgba(255,255,255,0.07) calc(var(--glare) + 3%) calc(var(--glare) + 10%), transparent calc(var(--glare) + 10.2%)),
     var(--blue-gradient);
-  clip-path: polygon(11% 0, 89% 0, 100% 100%, 0 100%);
-  border-radius: 18px 18px 6px 6px;
+  border-radius: 14px;
+  overflow: hidden;
   isolation: isolate;
 }
-/* chrome trim along the top edge */
-.windshield::before {
-  content: ""; position: absolute; inset: 0 0 auto 0; height: 7px;
-  background: linear-gradient(90deg, #B0B6BC, #FCFCFB 35%, #E8E7E8 65%, #B0B6BC);
-}
-.windshield-list { display: grid; gap: 1.1rem; padding-top: 0.5rem; }
+.windshield-list { display: grid; gap: 1.1rem; }
 .windshield-list li { display: grid; font-size: 1rem; line-height: 1.35; color: var(--white); padding-left: 0.9rem; border-left: 3px solid rgba(255,255,255,0.55); }
 .windshield-list strong { font-size: 1.2rem; font-weight: 800; color: var(--white); }
 
@@ -408,7 +404,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 900px) {
   /* Text runs nearly full width here, so the gradient holds the dark stop longer and the glare moves to the edge. */
   :root { --blue-gradient: linear-gradient(100deg, #0054F7 0%, #0054F7 85%, #0075DC 100%); }
-  .windshield { --glare: 84%; padding-inline: calc(11% + 1rem); }
+  .windshield { --glare: 84%; }
   .hero-grid, .adas-grid, .area-grid, .row, .area-group, .faq-item, .contact-grid { grid-template-columns: 1fr; }
   .point-list { grid-template-columns: 1fr; }
   .service-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -424,7 +420,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .service-list, .why-list, .step-list, .form-grid, .city-services, .work-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .actions .btn { width: 100%; }
-  .windshield { clip-path: polygon(7% 0, 93% 0, 100% 100%, 0 100%); padding-inline: calc(7% + 1rem); }
   .lede { font-size: 1.0625rem; }
   .hero-logo { max-width: 17rem; }
   .intro p { font-size: 1.125rem; }
