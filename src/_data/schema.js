@@ -15,7 +15,7 @@ const business = {
   logo: `${site.url}/assets/img/share-card-02-1200.png`,
   image: `${site.url}/assets/img/share-card-02-1200.png`,
   description:
-    "Mobile auto glass service in the north Dallas-Fort Worth metro: windshield replacement, chip and crack repair, in-house ADAS calibration, and door, back and mirror glass. We come to you.",
+    "Mobile auto glass service in the north Dallas-Fort Worth metro: windshield repair, windshield replacement, in-house ADAS calibration, and door, back and mirror glass. We come to you.",
   // Service-area business: city and state only, no street address.
   address: {
     "@type": "PostalAddress",
@@ -24,13 +24,13 @@ const business = {
     addressCountry: "US",
   },
   areaServed: cities.map((c) => ({ "@type": "City", name: `${c}, ${site.region}` })),
-  knowsAbout: ["Windshield replacement", "Windshield chip repair", "ADAS calibration", "Auto glass replacement"],
+  knowsAbout: ["Windshield repair", "Windshield replacement", "Rock chip repair", "ADAS calibration", "Auto glass replacement"],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Auto glass services",
     itemListElement: [
+      "Windshield repair",
       "Windshield replacement",
-      "Windshield chip and crack repair",
       "ADAS camera calibration",
       "Door and side glass replacement",
       "Back glass replacement",
