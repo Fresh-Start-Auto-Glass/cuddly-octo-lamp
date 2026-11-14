@@ -144,6 +144,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .hero-logo { width: 100%; max-width: 30rem; margin-inline: auto; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(2rem, 4vw, 3.5rem); align-items: center; }
 .hero-copy h1 { max-width: 17ch; text-wrap: balance; }
+.hero-kicker { margin: 0 0 0.75rem; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--silver); }
 .lede { margin-top: 1.25rem; font-size: 1.1875rem; line-height: 1.55; color: var(--muted); max-width: 36rem; }
 .hero .actions { margin-top: 2rem; }
 

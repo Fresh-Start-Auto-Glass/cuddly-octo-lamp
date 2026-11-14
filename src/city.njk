@@ -49,11 +49,25 @@ eleventyComputed:
     </div>
   </section>
 
+  {%- if city.guide %}
+  <section class="row" aria-labelledby="guide-title">
+    <h2 id="guide-title">{{ city.guide.title }}</h2>
+    <div class="row-body">
+      {%- for para in city.guide.paragraphs %}
+      <p>{{ para }}</p>
+      {%- endfor %}
+      {%- if city.guide.areas %}
+      <p>{{ city.guide.areas }}</p>
+      {%- endif %}
+    </div>
+  </section>
+  {%- endif %}
+
   <section class="row" aria-labelledby="services-title">
     <h2 id="services-title">Services in {{ city.name }}</h2>
     <div class="row-body">
       <ul class="city-services">
-        <li><a href="/services/#windshield">Windshield replacement</a></li>
+        <li><a href="/windshield-replacement/">Windshield replacement</a></li>
         <li><a href="/windshield-repair/">Windshield repair (chips and cracks)</a></li>
         <li><a href="/services/#adas">In-house ADAS calibration</a></li>
         <li><a href="/services/#door-glass">Door and side glass replacement</a></li>
