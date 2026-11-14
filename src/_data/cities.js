@@ -5,7 +5,7 @@
 // Only name places you're sure of, and re-check them now and then (malls get renamed, centers close).
 // Without a localLine the page uses a neutral version.
 //
-// guide (optional): a section of text written for that city only (title, paragraphs, areas).
+// guide (optional): a section of text written for that city only (title, paragraphs, areas, faqs).
 // Each city page should say something the others don't; Google ignores pages that are copies with the name swapped.
 // No job counts or customer stories unless they're real.
 export default [
@@ -19,6 +19,10 @@ export default [
         "Frisco also has a lot of late-model SUVs and trucks with lane-keeping and automatic braking cameras. If your windshield has to be replaced, that camera needs to be recalibrated, and we do it on site in the same visit.",
       ],
       areas: "We cover all of Frisco, including ZIP codes 75033, 75034, 75035, and 75036, and we're about 15 minutes away in Little Elm.",
+      faqs: [
+        { q: "Can you replace my windshield at my office in Frisco?", a: "Yes, as long as the property allows it and there's room to open the doors. Most people would rather have us come to the office along the Tollway or SH 121 than lose part of a day at a shop. If your vehicle needs a calibration test drive, we'll let you know ahead of time." },
+        { q: "Do you cover the newer neighborhoods in north Frisco?", a: "Yes. We cover all of Frisco, from the neighborhoods off Preston Road and FM 423 up to US-380." },
+      ],
     },
   },
   {
@@ -31,6 +35,10 @@ export default [
         "If a chip is smaller than a quarter and not right in front of the driver, it can often be repaired in under an hour in your driveway. If the crack has already spread, we'll replace the windshield and recalibrate the ADAS camera before we leave.",
       ],
       areas: "We cover McKinney ZIP codes 75069, 75070, 75071, and 75072. From Little Elm we're usually 25 to 30 minutes away.",
+      faqs: [
+        { q: "Do you also cover the towns north of McKinney?", a: "Yes. Along with all of McKinney, we serve Melissa and Anna in our regular service area." },
+        { q: "Can you work at a home with only street parking?", a: "Usually, yes. We need a safe, legal spot with room to open the doors. If the street is too busy, we'll suggest another nearby spot when you book." },
+      ],
     },
   },
   {
@@ -43,6 +51,10 @@ export default [
         "We come to you anywhere in Denton, including apartment complexes and workplace parking lots, so you don't need to find a ride to a shop. If your vehicle has a windshield camera, we recalibrate it in the same visit after a replacement.",
       ],
       areas: "We cover all of Denton, including ZIP codes 76201, 76205, 76207, 76208, 76209, and 76210, and we're about 20 to 25 minutes away in Little Elm.",
+      faqs: [
+        { q: "Can you come to my apartment complex in Denton?", a: "Yes, as long as the property allows it and we can park with room to open the doors. Let us know your building or lot when you book so we can find you quickly." },
+        { q: "Do you cover the towns around Denton?", a: "Yes. Corinth, Argyle, Lake Dallas, Sanger, Aubrey, and Providence Village are all in our regular service area." },
+      ],
     },
   },
   {
@@ -55,6 +67,10 @@ export default [
         "Many vehicles in Plano have a camera behind the windshield for lane-keeping and automatic braking. After a replacement we recalibrate it on site, so there's no follow-up trip to a dealership.",
       ],
       areas: "We cover Plano ZIP codes 75023, 75024, 75025, 75074, 75075, 75093, and 75094. From Little Elm we're usually about 25 minutes away.",
+      faqs: [
+        { q: "Can you work in an office parking garage in Plano?", a: "Often, yes, if the property allows it and there's room to open the doors. Some calibrations need a level spot or a test drive, so tell us about the garage when you book and we'll plan for it." },
+        { q: "Do you also serve Carrollton and Addison?", a: "Yes. Both are in our regular service area, along with all of Plano." },
+      ],
     },
   },
   {
@@ -67,6 +83,10 @@ export default [
         "Chips from traffic on SH 121 and the Sam Rayburn Tollway are common. Call when you first see one and a repair usually stops it from spreading. If it's past repair, we'll replace the windshield and handle any camera calibration in the same visit.",
       ],
       areas: "We cover all of The Colony (75056). From Little Elm we're usually 10 to 15 minutes away.",
+      faqs: [
+        { q: "How fast can you get to The Colony?", a: "Because we're right next door, we can often be out the same day or the next day. Call in the morning for the best chance at a same-day visit." },
+        { q: "Can you meet me at work instead of at home?", a: "Yes. We'll come to your workplace anywhere in The Colony, as long as the property allows it and there's room to open the doors." },
+      ],
     },
   },
   {
@@ -79,6 +99,10 @@ export default [
         "We come to you anywhere in Lewisville, from Old Town to the neighborhoods near the lake. We handle chip repair, full windshield replacement with in-house ADAS calibration, and door and back glass.",
       ],
       areas: "We cover Lewisville ZIP codes 75057, 75067, and 75077. From Little Elm we're usually about 20 minutes away.",
+      faqs: [
+        { q: "Is a cracked windshield safe to drive on I-35E?", a: "A small chip outside your line of sight is usually fine for a short time, but have it repaired soon because highway vibration and temperature swings make it spread. A long crack, a crack in front of the driver, or damage at the edge of the glass should be replaced as soon as possible." },
+        { q: "Do you cover Highland Village and Lake Dallas too?", a: "Yes. Highland Village, Lake Dallas, Coppell, and Carrollton are all in our regular service area." },
+      ],
     },
   },
   {
@@ -91,6 +115,10 @@ export default [
         "A lot of Prosper families drive newer SUVs and trucks with driver-assist cameras. If your windshield is replaced, the camera has to be recalibrated, and we do that in-house in the same visit.",
       ],
       areas: "We cover all of Prosper (75078). From Little Elm we're usually about 15 minutes away.",
+      faqs: [
+        { q: "My vehicle is brand new. Does it still need calibration after a windshield replacement?", a: "Almost always, yes. Newer vehicles are the most likely to have a windshield camera for lane-keeping and emergency braking. We'll check your VIN up front and calibrate the camera in the same visit." },
+        { q: "Do you come to new-build neighborhoods in Prosper?", a: "Yes. If your street is still under construction, just give us the best place to park when you book." },
+      ],
     },
   },
   {
@@ -104,6 +132,10 @@ export default [
         "Whether you need a quick chip repair, a full windshield replacement with in-house ADAS calibration, or a door or back glass replaced after a break-in, we do it in your driveway or parking lot.",
       ],
       areas: "We cover all of Little Elm (75068) and nearby Oak Point, Lakewood Village, and Paloma Creek.",
+      faqs: [
+        { q: "Are you open on weekends?", a: "Yes. We're available Saturday, 8 AM to 2 PM, and Sunday by appointment, along with Monday to Friday, 8 AM to 6 PM. After-hours appointments may be available for an added fee." },
+        { q: "Do you cover Oak Point, Lakewood Village, and Paloma Creek?", a: "Yes. They're all right around our home base, so they're some of the easiest places for us to reach." },
+      ],
     },
   },
   {
@@ -116,6 +148,10 @@ export default [
         "There aren't many auto glass shops nearby, which is where a mobile service helps. We come to your home, a job site, or your work parking lot, so you don't have to drive a cracked windshield across the county.",
       ],
       areas: "We cover all of Celina (75009). From Little Elm we're usually about 20 minutes away.",
+      faqs: [
+        { q: "Is there a trip fee for Celina?", a: "No. Celina is in our regular service area, so there's no extra trip fee." },
+        { q: "Can you come to a job site in Celina?", a: "Often, yes. We need a safe, flat spot with room to open the doors, away from heavy equipment and dust. Tell us where you'll be when you book." },
+      ],
     },
   },
   {
@@ -128,6 +164,10 @@ export default [
         "We'll come to your driveway or workplace anywhere in town. A chip repair usually takes under an hour. A full replacement includes ADAS camera calibration in the same visit when your vehicle needs it.",
       ],
       areas: "We cover Flower Mound ZIP codes 75022 and 75028. From Little Elm we're usually about 25 minutes away.",
+      faqs: [
+        { q: "Do you cover Lantana and Highland Village?", a: "Yes. Lantana, Highland Village, Argyle, and Northlake are all in our regular service area along with Flower Mound." },
+        { q: "Can you replace door or back glass after a break-in?", a: "Yes. We replace door glass and back glass at your home or work, and we vacuum up the broken glass inside the vehicle." },
+      ],
     },
   },
   {
@@ -140,6 +180,10 @@ export default [
         "We come to you anywhere in Allen, at home, at work, or near Watters Creek. Get a free quote, and we'll tell you honestly whether a repair will hold or the windshield needs replacing.",
       ],
       areas: "We cover Allen ZIP codes 75002 and 75013. From Little Elm we're usually about 30 minutes away.",
+      faqs: [
+        { q: "Is there a trip fee for Allen?", a: "No. Allen is in our regular service area. Nearby Wylie and Murphy are in our extended service area, where a trip fee may apply. We'll include it in your free quote." },
+        { q: "How long does a windshield replacement take?", a: "A typical windshield replacement takes about 60 to 90 minutes, plus time for calibration if your vehicle needs it. We'll give you a realistic estimate when you book." },
+      ],
     },
   },
 ];
