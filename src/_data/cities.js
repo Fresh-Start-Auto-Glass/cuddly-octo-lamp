@@ -18,7 +18,7 @@ export default [
         "Frisco is still building out, and that means a steady stream of gravel and dump trucks on the Dallas North Tollway, SH 121, Preston Road, and US-380. Plenty of windshield chips around Frisco start with a rock kicked up by a construction truck. If you catch a chip early, a quick repair usually saves the glass.",
         "Frisco also has a lot of late-model SUVs and trucks with lane-keeping and automatic braking cameras. If your windshield has to be replaced, that camera needs to be recalibrated, and we do it on site in the same visit.",
       ],
-      areas: "We cover all of Frisco, including ZIP codes 75033, 75034, 75035, and 75036. We're about 15 minutes away from our home base in Little Elm.",
+      areas: "We cover all of Frisco, including ZIP codes 75033, 75034, 75035, and 75036, and we're about 15 minutes away in Little Elm.",
     },
   },
   {
@@ -30,7 +30,7 @@ export default [
         "McKinney stretches from the historic square out to brand-new neighborhoods on the west side, and a lot of daily driving happens on US-75, SH 121, and US-380. Those corridors carry plenty of construction and gravel trucks, which is where many rock chips come from.",
         "If a chip is smaller than a quarter and not right in front of the driver, it can often be repaired in under an hour in your driveway. If the crack has already spread, we'll replace the windshield and recalibrate the ADAS camera before we leave.",
       ],
-      areas: "We cover McKinney ZIP codes 75069, 75070, 75071, and 75072. We're usually 25 to 30 minutes away from our home base in Little Elm.",
+      areas: "We cover McKinney ZIP codes 75069, 75070, 75071, and 75072. From Little Elm we're usually 25 to 30 minutes away.",
     },
   },
   {
@@ -42,7 +42,7 @@ export default [
         "Between I-35E, I-35W, Loop 288, and US-380, Denton drivers spend a lot of time on busy highways with heavy truck traffic, and long-running highway construction adds loose gravel. That's a recipe for rock chips. A chip that's repaired early usually stops there; one that's left through a few hot afternoons and cold mornings often turns into a crack.",
         "We come to you anywhere in Denton, including apartment complexes and workplace parking lots, so you don't need to find a ride to a shop. If your vehicle has a windshield camera, we recalibrate it in the same visit after a replacement.",
       ],
-      areas: "We cover all of Denton, including ZIP codes 76201, 76205, 76207, 76208, 76209, and 76210. We're usually 20 to 25 minutes away from our home base in Little Elm.",
+      areas: "We cover all of Denton, including ZIP codes 76201, 76205, 76207, 76208, 76209, and 76210, and we're about 20 to 25 minutes away in Little Elm.",
     },
   },
   {
@@ -54,7 +54,7 @@ export default [
         "Plano drivers spend a lot of time on US-75, the Dallas North Tollway, the George Bush Turnpike, and SH 121, where highway speeds turn a small rock into a real chip. Since we're mobile, we can do the work in your office parking lot while you're at your desk, as long as the property allows it.",
         "Many vehicles in Plano have a camera behind the windshield for lane-keeping and automatic braking. After a replacement we recalibrate it on site, so there's no follow-up trip to a dealership.",
       ],
-      areas: "We cover Plano ZIP codes 75023, 75024, 75025, 75074, 75075, 75093, and 75094. We're about 25 minutes away from our home base in Little Elm.",
+      areas: "We cover Plano ZIP codes 75023, 75024, 75025, 75074, 75075, 75093, and 75094. From Little Elm we're usually about 25 minutes away.",
     },
   },
   {
@@ -63,10 +63,10 @@ export default [
     guide: {
       title: "Close to home in The Colony",
       paragraphs: [
-        "The Colony is right next door to our home base in Little Elm. Whether you're near Lewisville Lake, at Grandscape, or on your way to SH 121, we come to you.",
+        "The Colony is right next door to our home base in Little Elm, so it's one of the quickest places for us to reach. Whether you're near Lewisville Lake, at Grandscape, or on your way to SH 121, we come to you.",
         "Chips from traffic on SH 121 and the Sam Rayburn Tollway are common. Call when you first see one and a repair usually stops it from spreading. If it's past repair, we'll replace the windshield and handle any camera calibration in the same visit.",
       ],
-      areas: "We cover all of The Colony (75056). We're usually 10 to 15 minutes away from our home base in Little Elm.",
+      areas: "We cover all of The Colony (75056). From Little Elm we're usually 10 to 15 minutes away.",
     },
   },
   {
@@ -78,7 +78,7 @@ export default [
         "I-35E and SH 121 run right through Lewisville and carry a lot of heavy truck traffic, so rock chips and cracks are an everyday risk. Texas heat and sudden cold fronts make a small chip spread quickly, so it pays to deal with it early.",
         "We come to you anywhere in Lewisville, from Old Town to the neighborhoods near the lake. We handle chip repair, full windshield replacement with in-house ADAS calibration, and door and back glass.",
       ],
-      areas: "We cover Lewisville ZIP codes 75057, 75067, and 75077. We're about 20 minutes away from our home base in Little Elm.",
+      areas: "We cover Lewisville ZIP codes 75057, 75067, and 75077. From Little Elm we're usually about 20 minutes away.",
     },
   },
   {
@@ -90,7 +90,7 @@ export default [
         "Prosper is growing fast, with new neighborhoods, Tollway work heading north, and construction along US-380 and Preston Road. More construction traffic means more gravel on the road and more cracked windshields.",
         "A lot of Prosper families drive newer SUVs and trucks with driver-assist cameras. If your windshield is replaced, the camera has to be recalibrated, and we do that in-house in the same visit.",
       ],
-      areas: "We cover all of Prosper (75078). We're about 15 minutes away from our home base in Little Elm.",
+      areas: "We cover all of Prosper (75078). From Little Elm we're usually about 15 minutes away.",
     },
   },
   {
@@ -100,7 +100,7 @@ export default [
     guide: {
       title: "Your local auto glass service in Little Elm",
       paragraphs: [
-        "Little Elm is our home base. With all the new construction around US-380, FM 423, and Eldorado Parkway, rock chips from gravel trucks are common. Call when you first notice a chip, and a repair usually keeps it from spreading into a crack.",
+        "Little Elm is home for us, so it's where we can usually get to you fastest. With all the new construction around US-380, FM 423, and Eldorado Parkway, rock chips from gravel trucks are common. Call when you first notice a chip, and a repair usually keeps it from spreading into a crack.",
         "Whether you need a quick chip repair, a full windshield replacement with in-house ADAS calibration, or a door or back glass replaced after a break-in, we do it in your driveway or parking lot.",
       ],
       areas: "We cover all of Little Elm (75068) and nearby Oak Point, Lakewood Village, and Paloma Creek.",
@@ -115,7 +115,7 @@ export default [
         "Celina is one of the fastest-growing towns in North Texas, and the building boom along Preston Road, FM 455, and the new Tollway stretch puts a lot of gravel and dirt trucks on the road. It's a common way for a windshield to pick up a chip.",
         "There aren't many auto glass shops nearby, which is where a mobile service helps. We come to your home, a job site, or your work parking lot, so you don't have to drive a cracked windshield across the county.",
       ],
-      areas: "We cover all of Celina (75009). We're about 20 minutes away from our home base in Little Elm.",
+      areas: "We cover all of Celina (75009). From Little Elm we're usually about 20 minutes away.",
     },
   },
   {
@@ -127,7 +127,7 @@ export default [
         "Most Flower Mound driving runs along FM 2499, FM 1171, and FM 407, with I-35E and I-35W close by for longer commutes. Highway speeds and truck traffic on those routes are a common source of rock chips.",
         "We'll come to your driveway or workplace anywhere in town. A chip repair usually takes under an hour. A full replacement includes ADAS camera calibration in the same visit when your vehicle needs it.",
       ],
-      areas: "We cover Flower Mound ZIP codes 75022 and 75028. We're about 25 minutes away from our home base in Little Elm.",
+      areas: "We cover Flower Mound ZIP codes 75022 and 75028. From Little Elm we're usually about 25 minutes away.",
     },
   },
   {
@@ -139,7 +139,7 @@ export default [
         "US-75 and SH 121 carry most of Allen's commuter traffic, and long highway drives are where rock chips usually happen. A chip left alone through a few hot afternoons and cold mornings can easily turn into a crack.",
         "We come to you anywhere in Allen, at home, at work, or near Watters Creek. Get a free quote, and we'll tell you honestly whether a repair will hold or the windshield needs replacing.",
       ],
-      areas: "We cover Allen ZIP codes 75002 and 75013. We're about 30 minutes away from our home base in Little Elm.",
+      areas: "We cover Allen ZIP codes 75002 and 75013. From Little Elm we're usually about 30 minutes away.",
     },
   },
 ];
