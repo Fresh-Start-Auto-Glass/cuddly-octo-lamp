@@ -39,42 +39,50 @@ eleventyComputed:
   <section class="row" aria-labelledby="local-title">
     <h2 id="local-title">Cracked windshield in {{ city.name }}?</h2>
     <div class="row-body">
-      <p>Don't waste an afternoon sitting in a shop. We're a fully mobile auto glass service, and we come to you anywhere in {{ city.name }}, {{ city.localLine or "whether you're at home, at the office, or stuck in a parking lot" }}.</p>
-      {%- if city.isHomeBase %}
-      <p>We're based right here in {{ city.name }}, so we know the area well and can usually be out same-day or next-day. We're insured, and every job is backed by a workmanship warranty.</p>
-      {%- else %}
-      <p>As a locally based business in nearby Little Elm, we know {{ city.name }} well and we can usually be out same-day or next-day. We're insured, and every job is backed by a workmanship warranty.</p>
-      {%- endif %}
-      <p>Most importantly, if your vehicle needs ADAS camera calibration after a windshield replacement (and most newer vehicles do), we handle it in-house, in the same visit, on our own equipment. No sending you to a dealership. One appointment, done right.</p>
+      <p>Don't waste an afternoon sitting in a shop. We come to you anywhere in {{ city.name }}, {{ city.localLine or "whether you're at home, at the office, or stuck in a parking lot" }}.{% if city.isHomeBase %} We're based right here in {{ city.name }}.{% else %} We're based in nearby Little Elm.{% endif %} We're insured, every job is backed by a workmanship warranty, and if your vehicle needs ADAS camera calibration after a new windshield, we do it in-house in the same visit.</p>
     </div>
   </section>
+
+  {%- if city.guide %}
+  <section class="row" aria-labelledby="guide-title">
+    <h2 id="guide-title">{{ city.guide.title }}</h2>
+    <div class="row-body">
+      {%- for para in city.guide.paragraphs %}
+      <p>{{ para }}</p>
+      {%- endfor %}
+      {%- if city.guide.areas %}
+      <p>{{ city.guide.areas }}</p>
+      {%- endif %}
+    </div>
+  </section>
+  {%- endif %}
+
+  {%- if city.guide and city.guide.faqs %}
+  <section class="row" aria-labelledby="city-faq-title">
+    <h2 id="city-faq-title">Common questions in {{ city.name }}</h2>
+    <div class="row-body">
+      {%- for f in city.guide.faqs %}
+      <h3>{{ f.q }}</h3>
+      <p>{{ f.a }}</p>
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endif %}
 
   <section class="row" aria-labelledby="services-title">
     <h2 id="services-title">Services in {{ city.name }}</h2>
     <div class="row-body">
       <ul class="city-services">
-        <li><a href="/services/#windshield">Windshield replacement</a></li>
+        <li><a href="/windshield-replacement/">Windshield replacement</a></li>
         <li><a href="/windshield-repair/">Windshield repair (chips and cracks)</a></li>
-        <li><a href="/services/#adas">In-house ADAS calibration</a></li>
-        <li><a href="/services/#door-glass">Door and side glass replacement</a></li>
-        <li><a href="/services/#back-glass">Back glass (rear windshield) replacement</a></li>
-        <li><a href="/services/#mirror-glass">Side mirror glass replacement</a></li>
+        <li><a href="/adas-calibration/">In-house ADAS calibration</a></li>
+        <li><a href="/car-window-replacement/#door-glass">Door and side glass replacement</a></li>
+        <li><a href="/car-window-replacement/#back-glass">Back glass (rear windshield) replacement</a></li>
+        <li><a href="/car-window-replacement/#mirror-glass">Side mirror glass replacement</a></li>
       </ul>
     </div>
   </section>
 
-  <section class="row" aria-labelledby="why-title">
-    <h2 id="why-title">Why {{ city.name }} drivers choose Fresh Start</h2>
-    <div class="row-body">
-      <ul class="why-list">
-        <li>We come to you, anywhere in {{ city.name }}</li>
-        <li>Same-day and next-day appointments in most cases</li>
-        <li>In-house ADAS calibration, not outsourced</li>
-        <li>Insurance and out of pocket both welcome</li>
-        <li>Fair pricing and warrantied work</li>
-      </ul>
-    </div>
-  </section>
 </div>
 
 <section class="wrap other-cities" aria-labelledby="other-title">

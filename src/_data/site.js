@@ -15,9 +15,9 @@ export default {
   get phoneHref() { return this.phone ? "tel:+1" + this.phone.replace(/\D/g, "") : "/contact/"; },
 
   // Keep schema.js in sync.
-  hours: "Monday to Friday, 8 AM to 6 PM; Saturday, 8 AM to 2 PM",
+  hours: "Monday to Friday, 8 AM to 6 PM; Saturday, 8 AM to 2 PM; Sunday by appointment",
   // Same hours, one line per row, for the footer and contact page.
-  hoursLines: ["Mon to Fri: 8 AM to 6 PM", "Saturday: 8 AM to 2 PM", "Sunday: Closed"],
+  hoursLines: ["Mon to Fri: 8 AM to 6 PM", "Saturday: 8 AM to 2 PM", "Sunday: By appointment"],
   hoursConfirmed: true,
 
   // Launch offer banner (top of every page) + FAQ terms. Hidden automatically on any build after `ends`.
